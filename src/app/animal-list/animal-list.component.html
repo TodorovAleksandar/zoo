@@ -1,10 +1,26 @@
-<table class="table table">
+<h1></h1>
+<hr><br>
+
+<form>
+  <label for="vrsta">VRSTA:</label>
+  <input name="vrsta" type="text" [(ngModel)]="newAnimal.vrsta"/>
+
+  <label for="ime">IME:</label>
+  <input name="ime" type="text" [(ngModel)]="newAnimal.ime"/>
+
+  <label for="datum_rodjenja">RODJENJE:</label>
+  <input name="datum_rodjenja" type="text" [(ngModel)]="newAnimal.datum_rodjenja"/>
+
+  <button (click)="addAnimal()">Add Animal</button>
+
+</form><br>
+<table>
   <thead>
-    <tr>
+    
     <th>vrsta</th>
     <th>ime</th>
     <th>datum_rodjenja</th>
-    </tr>
+    
   </thead>
   <tr *ngFor="let animal of animals">
     <td>{{ animal.vrsta }}</td>
