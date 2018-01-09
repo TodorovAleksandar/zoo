@@ -10,6 +10,8 @@
     <td>{{ animal.vrsta }}</td>
     <td>{{animal.ime}}</td>
     <td>{{animal.datum_rodjenja}}</td>
+    <td *ngIf="!animal.datum_rodjenja">nema<td>
+    <td *ngIf="animal.datum_rodjenja">{{animal.datum_rodjenja}}</td>
     <td>
       <button class="btn btn-danger"
         (click)="removeAnimal(animal)">
