@@ -1,0 +1,21 @@
+<table class="table table">
+  <thead>
+    <tr>
+    <th>vrsta</th>
+    <th>ime</th>
+    <th>datum_rodjenja</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let animal of animals">
+    <td>{{ animal.vrsta }}</td>
+    <td>{{animal.ime}}</td>
+    <td>{{animal.datum_rodjenja}}</td>
+    <td>
+      <button class="btn btn-danger"
+        (click)="removeContact(contact)">
+        X
+      </button>
+    </td>
+  </tr>
+ 
+ </table>
